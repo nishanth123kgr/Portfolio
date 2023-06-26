@@ -39,10 +39,10 @@ particlesJS('particles-js',
       },
       "size": {
         "value": 5,
-        "random": true,
+        "random": false,
         "anim": {
-          "enable": false,
-          "speed": 40,
+          "enable": true,
+          "speed": 5,
           "size_min": 0.1,
           "sync": false
         }
@@ -69,7 +69,7 @@ particlesJS('particles-js',
       }
     },
     "interactivity": {
-      "detect_on": "window",
+      "detect_on": "NULL",
       "events": {
         "onhover": {
           "enable": true,
