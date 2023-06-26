@@ -118,3 +118,22 @@ particlesJS('particles-js',
   }
 
 );
+
+const themeToggle = document.querySelector("#theme-toggle");
+
+function toggleTheme() {
+  if ("dark" === themeToggle.getAttribute("aria-label")) {
+    themeToggle.setAttribute("aria-label", "light");
+    document.documentElement.style.setProperty("--primary_bg", "#fff");
+    document.documentElement.style.setProperty("--primary_text", "#000");
+    document.getElementById("connect").classList.replace("btn-outline-light", "btn-outline-dark");
+}
+else {
+    themeToggle.setAttribute("aria-label", "dark");
+    document.documentElement.style.setProperty("--primary_bg", "#000");
+    document.documentElement.style.setProperty("--primary_text", "#fff");
+    document.getElementById("connect").classList.replace("btn-outline-dark", "btn-outline-light");
+}
+}
+
+themeToggle.addEventListener("click", toggleTheme);
