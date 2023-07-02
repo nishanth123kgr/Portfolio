@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 :root{
-  --primary_bg: #000;
+  --primary_bg: #202124;
   --primary_text: #fff;
 }
 
@@ -41,7 +41,7 @@ nav{
 }
 
 #particles-js {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -77,5 +77,14 @@ nav{
   margin-right: 2.5rem;
 }
   
+@keyframes flash-animation {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.flash-effect {
+  animation: flash-animation 5s ease;
+}
   
   

@@ -36,12 +36,14 @@ reflectPreference(),
     .addEventListener("change", ({ matches: e }) => {
       (theme.value = e ? "dark" : "light"), setPreference();
     });
-
+let particles_color;
 if(theme.value==='dark'){
-    document.documentElement.style.setProperty("--primary_bg", "#000");
+    document.documentElement.style.setProperty("--primary_bg", "#202124");
     document.documentElement.style.setProperty("--primary_text", "#fff");
+    particles_color = '#ffffff';
 }
 else{
     document.documentElement.style.setProperty("--primary_bg", "#fff");
     document.documentElement.style.setProperty("--primary_text", "#000");
+    particles_color = '#202124';
 }
