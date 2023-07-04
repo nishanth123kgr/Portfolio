@@ -1,42 +1,42 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
-:root{
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@700&display=swap");
+:root {
   --primary_bg: #202124;
   --primary_text: #fff;
 }
 
-.navbar-brand{
+.navbar-brand {
   color: var(--primary_text);
 }
 
-.center_row{
+.center_row {
   display: flex;
   align-items: center;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat', sans-serif;
-  
+  font-family: "Montserrat", sans-serif;
 }
 
-body{
+body {
   overflow-x: hidden;
   color: var(--primary_text);
 }
 
-
-.items{
-  font-size: .5rem;
+.items {
+  font-size: 0.5rem;
 }
 
-.items button{
+.items button {
   border-radius: 0px;
 }
 
-nav{
+.navbar {
+  padding: 2% 10%;
+  width: 100%;
   position: fixed;
 }
 
@@ -48,43 +48,99 @@ nav{
   height: 100%;
   background-color: var(--primary_bg);
   z-index: -1;
-  }
-
-.next{
-    height: 100vh;
 }
 
-.main{
+.next {
+  height: 100vh;
+}
+
+.main {
   height: 100vh;
   padding: 1% 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.main h1{
-  
-  font-family: 'Montserrat', sans-serif;
+.main h1 {
+  font-family: "Unbounded", cursive;
   font-weight: 700;
   font-size: 4.5rem;
-  position: relative;
-  top: 45%;
-  transform: translateY(-50%);
 }
 
+.main .welcome {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  width: fit-content;
+  color: #fff;
+  font-weight: 700;
+  padding: 7px;
+  background: rgb(255, 0, 207);
+  background: linear-gradient(
+    248deg,
+    rgba(255, 0, 207, 1) 3%,
+    rgba(132, 0, 255, 1) 74%
+  );
 
-.links a{
+  /* padding: 15px 8px; */
+}
+
+nav .navbar-brand:hover {
+  color: rgba(255, 0, 207, 1);
+}
+
+.welcome div {
+  border: 3px solid #fff;
+  padding: 10px;
+}
+
+.links a {
   margin-right: 2.5rem;
 }
-.social-media{
+.social-media {
   margin-right: 2.5rem;
 }
-  
-@keyframes flash-animation {
-  0% { opacity: 1; }
-  50% { opacity: 0; }
-  100% { opacity: 1; }
+
+
+.social-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 1rem;
+  border: 2px solid var(--icon-fill)  ;
+  padding: 5px;
+  border-radius: 50%;
+  width: 40px;
+  cursor: pointer;
 }
 
-.flash-effect {
-  animation: flash-animation 5s ease;
+.social-box:last-child {
+  margin-right: 0;
 }
-  
-  
+
+.social-box:hover{
+  background: rgb(255, 0, 207);
+  background: linear-gradient(
+    248deg,
+    rgba(255, 0, 207, 1) 3%,
+    rgba(132, 0, 255, 1) 74%
+  );
+}
+
+.social-box:hover a{
+  color: #fff;
+}
+
+.social-box:before {
+  display: block;
+}
+
+.social-box a {  
+  color: var(--primary_text);
+  font-size: 1.3rem;
+  margin: auto;
+  text-align: center;
+  vertical-align: middle;
+}
+
+

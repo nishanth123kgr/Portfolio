@@ -1,11 +1,11 @@
-function particles_init(particles_color='#A020F0') {
+function particles_init(particles_color = "#8400FF") {
   particlesJS(
     "particles-js",
 
     {
       particles: {
         number: {
-          value: 40,
+          value: 80,
           density: {
             enable: true,
             value_area: 800,
@@ -18,7 +18,7 @@ function particles_init(particles_color='#A020F0') {
           type: "circle",
           stroke: {
             width: 0,
-            color: "#ffffff",
+            color: "#8400FF",
           },
           polygon: {
             nb_sides: 5,
@@ -30,7 +30,7 @@ function particles_init(particles_color='#A020F0') {
           },
         },
         opacity: {
-          value: 0.5,
+          value: 0.7,
           random: false,
           anim: {
             enable: true,
@@ -40,7 +40,7 @@ function particles_init(particles_color='#A020F0') {
           },
         },
         size: {
-          value: 5,
+          value: 7,
           random: false,
           anim: {
             enable: true,
@@ -50,9 +50,9 @@ function particles_init(particles_color='#A020F0') {
           },
         },
         line_linked: {
-          enable: true,
+          enable: false,
           distance: 150,
-          color: "#A020F0",
+          color: "#ffffff",
           opacity: 0.4,
           width: 1,
         },
@@ -71,7 +71,7 @@ function particles_init(particles_color='#A020F0') {
         },
       },
       interactivity: {
-        detect_on: "NULL",
+        detect_on: "window",
         events: {
           onhover: {
             enable: true,
@@ -101,7 +101,7 @@ function particles_init(particles_color='#A020F0') {
             distance: 200,
           },
           push: {
-            particles_nb: 4,
+            particles_nb: 5,
           },
           remove: {
             particles_nb: 2,
@@ -120,14 +120,21 @@ function particles_init(particles_color='#A020F0') {
     }
   );
 }
-console.log(theme.value);
-if(theme.value==='light')
+if (theme.value === "light") {
+  //   particles_init();
+  document
+    .getElementById("connect")
+    .classList.replace("btn-outline-light", "btn-outline-dark");
+} else {
+  //   particles_init("#ffffff");
+  document
+    .getElementById("connect")
+    .classList.replace("btn-outline-dark", "btn-outline-light");
+}
+
 particles_init();
-else
-particles_init('#ffffff');
 
 const themeToggle = document.querySelector("#theme-toggle");
-const html = document.getElementsByTagName("html")[0];
 function toggleTheme() {
   if ("dark" === themeToggle.getAttribute("aria-label")) {
     themeToggle.setAttribute("aria-label", "light");
@@ -136,7 +143,7 @@ function toggleTheme() {
     document
       .getElementById("connect")
       .classList.replace("btn-outline-light", "btn-outline-dark");
-    particles_init("#A020F0");
+    // particles_init("#A020F0");
   } else {
     themeToggle.setAttribute("aria-label", "dark");
     document.documentElement.style.setProperty("--primary_bg", "#202124");
@@ -144,12 +151,8 @@ function toggleTheme() {
     document
       .getElementById("connect")
       .classList.replace("btn-outline-dark", "btn-outline-light");
-    particles_init("#ffffff");
+    // particles_init("#ffffff");
   }
-
-  setTimeout(() => {
-    html.classList.remove("flash-effect");
-  }, 1000);
 }
 
 themeToggle.addEventListener("click", toggleTheme);
