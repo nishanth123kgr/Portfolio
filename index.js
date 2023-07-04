@@ -1,4 +1,8 @@
-function particles_init(particles_color = "#8400FF") {
+// Particle JS //
+
+function particles_init(
+  particles_color = ["#8400ff", "#ff00cf"]
+) {
   particlesJS(
     "particles-js",
 
@@ -120,39 +124,60 @@ function particles_init(particles_color = "#8400FF") {
     }
   );
 }
-if (theme.value === "light") {
-  //   particles_init();
-  document
-    .getElementById("connect")
-    .classList.replace("btn-outline-light", "btn-outline-dark");
-} else {
-  //   particles_init("#ffffff");
-  document
-    .getElementById("connect")
-    .classList.replace("btn-outline-dark", "btn-outline-light");
-}
 
 particles_init();
 
-const themeToggle = document.querySelector("#theme-toggle");
+// Particle JS Ends //
+
+// Theme Toggle Functionality //
+
+const themeToggle = document.querySelector("#theme-toggle"); // Theme Toggle Button
+
+if (theme.value === "light") { 
+  // If theme is light, then change the theme toggle button to dark
+  changeTheme("light", "dark", "1.2");
+} else { 
+  // If theme is dark, then change the theme toggle button to light
+  changeTheme("dark", "light", "1");
+}
+
+function changeTheme(from, to, brightness) {
+  document
+      .getElementById("connect")
+      .classList.replace("btn-outline-"+from, "btn-outline-"+to);
+    document.getElementById('profile').style.filter = 'brightness('+brightness+')';
+}
+
+
 function toggleTheme() {
+  // Toggle the theme
   if ("dark" === themeToggle.getAttribute("aria-label")) {
     themeToggle.setAttribute("aria-label", "light");
     document.documentElement.style.setProperty("--primary_bg", "#fff");
     document.documentElement.style.setProperty("--primary_text", "#000");
-    document
-      .getElementById("connect")
-      .classList.replace("btn-outline-light", "btn-outline-dark");
-    // particles_init("#A020F0");
+    changeTheme("light", "dark", "1.2");
   } else {
     themeToggle.setAttribute("aria-label", "dark");
     document.documentElement.style.setProperty("--primary_bg", "#202124");
     document.documentElement.style.setProperty("--primary_text", "#fff");
-    document
-      .getElementById("connect")
-      .classList.replace("btn-outline-dark", "btn-outline-light");
-    // particles_init("#ffffff");
+    changeTheme("dark", "light", "1");
   }
 }
 
 themeToggle.addEventListener("click", toggleTheme);
+
+// Theme Toggle Functionality Ends //
+
+// Typewriter Effect //
+
+const typed = new Typed("#typed", {
+  strings: [
+    "Web Developer.",
+    "Python Expert.",
+  ],
+  typeSpeed: 100,
+  backSpeed: 60,
+  loop: true,
+});
+
+// Typewriter Effect Ends //
