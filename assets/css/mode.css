@@ -2,11 +2,10 @@
 .sun-and-moon > :is(.moon, .sun, .sun-beams) {
   transform-origin: center center;
 }
-
-:root{
-  --icon-colors: var(--icon-fill);
+.main-left p{
+  --icon-fill: hsl(210 10% 30%);
+  color: var(--icon-fill);
 }
-
 .sun-and-moon > :is(.moon, .sun) {
   fill: var(--icon-fill);
 }
@@ -85,7 +84,7 @@
   block-size: 100%;
   stroke-linecap: round;
 }
-[data-theme="dark"] .theme-toggle {
+[data-theme="dark"] .theme-toggle, [data-theme="dark"] .main-left p {
   --icon-fill: hsl(210 10% 70%);
   --icon-fill-hover: hsl(210 15% 90%);
 }

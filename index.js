@@ -75,7 +75,7 @@ function particles_init(
         },
       },
       interactivity: {
-        detect_on: "document",
+        detect_on: "window",
         events: {
           onhover: {
             enable: true,
@@ -179,9 +179,9 @@ themeToggle.addEventListener("click", toggleTheme);
 
 const typed = new Typed("#typed", {
   strings: [
-    "Web Developer.",
-    "Python Expert.",
-    "Data Science<br>Student.",
+    "Full Stack Developer.",
+    "Python Aficionado.",
+    "Data Science Student.",
   ],
   typeSpeed: 200,
   backSpeed: 60,
