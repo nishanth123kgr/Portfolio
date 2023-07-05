@@ -44,9 +44,36 @@ body {
   color: #ff00cf;
   font-size: 2rem;
   padding: 0;
-  position: relative;
-  bottom:  0px;
+  position: absolute;
+  bottom:  5%;
   width: fit-content;
+}
+
+.fa-border{
+  border-radius: 50%;
+  border-color: #8400ff;
+  padding-bottom: .2em;
+  border-width: .2rem;
+}
+
+.main-left button{
+  transition: all 1s ease;
+}
+
+.main-left i::before{
+  display: block;
+}
+
+.main-left button:hover{
+  transform: scale(1.1);
+  background: linear-gradient(248deg, #ff00cf 3%, #8400ff 74%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.main-left button:hover .fa-border{
+  border-color: #8400ff;
 }
 
 .navbar {
@@ -69,6 +96,7 @@ body {
   background-color: var(--primary_bg);
   z-index: -1;
 }
+
 
 .links .active, .main-left .typed , .links div:hover a, .btn-outline-light{
   color: #ff00cf;
@@ -109,7 +137,7 @@ body {
 }
 
 .main .welcome {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   margin: 1rem 0 0.5rem;
   width: fit-content;
   color: #fff;
