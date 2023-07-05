@@ -27,6 +27,7 @@ body {
   overflow-x: hidden;
   color: var(--primary_text);
   background: var(--primary_bg);
+  height: 100%;
 }
 
 .items {
@@ -41,6 +42,8 @@ body {
   padding: 2% 7%;
   width: 100%;
   position: fixed;
+  z-index: 1;
+  backdrop-filter: blur(10px);
 }
 
 #particles-js {

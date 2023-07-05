@@ -181,3 +181,20 @@ const typed = new Typed("#typed", {
 });
 
 // Typewriter Effect Ends //
+
+
+// Scroll Reveal //
+
+// ScrollReveal().reveal(".reveal", {
+//   delay: 500,
+//   easing: "ease-in-out",
+//   reset: true,
+//   distance: "50px",
+//   interval: 100,
+//   duration: 1000,
+//   opacity: 0,
+//   origin: "bottom",
+// });
+
+// Scroll Reveal Ends //
+
