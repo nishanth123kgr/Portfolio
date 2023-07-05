@@ -62,7 +62,7 @@ function particles_init(
         },
         move: {
           enable: true,
-          speed: 2,
+          speed: 1,
           direction: "none",
           random: false,
           straight: false,
@@ -75,7 +75,7 @@ function particles_init(
         },
       },
       interactivity: {
-        detect_on: "window",
+        detect_on: "document",
         events: {
           onhover: {
             enable: true,
@@ -124,6 +124,13 @@ function particles_init(
     }
   );
 }
+
+var body = document.body,
+    html = document.documentElement;
+
+var height = Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+document.getElementById("particles-js").style.height = height + "px";
 
 particles_init();
 
@@ -174,8 +181,9 @@ const typed = new Typed("#typed", {
   strings: [
     "Web Developer.",
     "Python Expert.",
+    "Data Science<br>Student.",
   ],
-  typeSpeed: 100,
+  typeSpeed: 200,
   backSpeed: 60,
   loop: true,
 });
@@ -197,4 +205,28 @@ const typed = new Typed("#typed", {
 // });
 
 // Scroll Reveal Ends //
+
+
+// Get the navbar element
+const navbar = document.getElementById('navv');
+
+// Function to check if the navbar is at the top of the page
+function isNavbarAtTop() {
+  return window.scrollY === 0;
+}
+
+// Function to toggle the class based on the navbar position
+function toggleNavbarBackground() {
+  if (isNavbarAtTop()) {
+    navbar.classList.remove('scrolled');
+  } else {
+    navbar.classList.add('scrolled');
+  }
+}
+
+// Listen for scroll events and toggle the navbar background class
+window.addEventListener('scroll', toggleNavbarBackground);
+
+
+
 

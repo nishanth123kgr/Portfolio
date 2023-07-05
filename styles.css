@@ -39,11 +39,15 @@ body {
 }
 
 .navbar {
-  padding: 2% 7%;
+  padding: 2% 8%;
   width: 100%;
   position: fixed;
   z-index: 1;
-  backdrop-filter: blur(10px);
+  /* backdrop-filter: blur(10px); */
+}
+
+.navbar.scrolled {
+  backdrop-filter: blur(10px); /* Set the background color when scrolled */
 }
 
 #particles-js {
@@ -62,7 +66,7 @@ body {
 
 .main {
   height: 100vh;
-  padding: 1% 7%;
+  padding: 1% 8%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -93,11 +97,27 @@ body {
     rgba(132, 0, 255, 1) 74%
   );
 }
+/* .main-left{} */
 
 .main-right img{
   height: 400px;
   border-radius: 70% 50%;
   box-shadow: rgba(255, 0, 207, 0.4) -5px 5px, rgba(255, 0, 207, 0.3) -10px 10px, rgba(255, 0, 207, 0.2) -15px 15px, rgba(255, 0, 207, 0.1) -20px 20px, rgba(255, 0, 207, 0.05) -25px 25px;
+  transform: rotateY(180deg);
+  transition: transform 0.5s step-start;
+  animation: image-bounce 2s infinite;
+}
+
+@keyframes image-bounce {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px) ;
+  }
+  100% {
+    transform: translateY(-20px);
+  }
 }
 
 nav .navbar-brand:hover {
