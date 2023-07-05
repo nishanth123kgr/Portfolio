@@ -179,7 +179,7 @@ const typed = new Typed("#typed", {
     "Python Aficionado.",
     "Data Science Student.",
   ],
-  typeSpeed: 200,
+  typeSpeed: 120,
   backSpeed: 60,
   loop: true,
 });
@@ -210,6 +210,8 @@ function toggleNavbarBackground() {
 window.addEventListener('scroll', toggleNavbarBackground);
 
 // Navbar Blur Ends //
+
+
 
 // Navbar Active Link //
 
