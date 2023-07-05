@@ -1,10 +1,10 @@
 /* @import "https://unpkg.com/open-props/easings.min.css"; */
+
+
+
+
 .sun-and-moon > :is(.moon, .sun, .sun-beams) {
   transform-origin: center center;
-}
-.main-left p{
-  --icon-fill: hsl(210 10% 30%);
-  color: var(--icon-fill);
 }
 .sun-and-moon > :is(.moon, .sun) {
   fill: var(--icon-fill);
@@ -84,7 +84,7 @@
   block-size: 100%;
   stroke-linecap: round;
 }
-[data-theme="dark"] .theme-toggle, [data-theme="dark"] .main-left p {
+[data-theme="dark"] .theme-toggle {
   --icon-fill: hsl(210 10% 70%);
   --icon-fill-hover: hsl(210 15% 90%);
 }
@@ -148,4 +148,18 @@ html[data-theme="dark"] {
   80% {
     transform: rotate(10deg);
   }
+}
+
+
+[data-theme='dark'] *{
+  --primary_bg: #202124;
+  --primary_text: #fff;
+  --secondary_text: hsl(210 10% 70%);
+  --secondary_bg: hsl(210 15% 90%);
+}
+[data-theme='light'] *{
+  --primary_bg: #fff;
+  --primary_text: #000;
+  --secondary_text: hsl(210 10% 15%);
+  --secondary_bg: hsl(210 10% 30%);
 }

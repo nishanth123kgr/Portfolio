@@ -160,13 +160,9 @@ function toggleTheme() {
   // Toggle the theme
   if ("dark" === themeToggle.getAttribute("aria-label")) {
     themeToggle.setAttribute("aria-label", "light");
-    document.documentElement.style.setProperty("--primary_bg", "#fff");
-    document.documentElement.style.setProperty("--primary_text", "#000");
     changeTheme("light", "dark", "1.2");
   } else {
     themeToggle.setAttribute("aria-label", "dark");
-    document.documentElement.style.setProperty("--primary_bg", "#202124");
-    document.documentElement.style.setProperty("--primary_text", "#fff");
     changeTheme("dark", "light", "1");
   }
 }
@@ -191,21 +187,7 @@ const typed = new Typed("#typed", {
 // Typewriter Effect Ends //
 
 
-// Scroll Reveal //
-
-// ScrollReveal().reveal(".reveal", {
-//   delay: 500,
-//   easing: "ease-in-out",
-//   reset: true,
-//   distance: "50px",
-//   interval: 100,
-//   duration: 1000,
-//   opacity: 0,
-//   origin: "bottom",
-// });
-
-// Scroll Reveal Ends //
-
+// Navbar Blur //
 
 // Get the navbar element
 const navbar = document.getElementById('navv');
@@ -226,6 +208,29 @@ function toggleNavbarBackground() {
 
 // Listen for scroll events and toggle the navbar background class
 window.addEventListener('scroll', toggleNavbarBackground);
+
+// Navbar Blur Ends //
+
+// Navbar Active Link //
+
+// Get all the links in the navbar
+const navLinks = document.querySelectorAll('.navbar-brand');
+// Add click event listener to each link
+navLinks.forEach(link => {
+  link.addEventListener('click', (event) => {
+    event.preventDefault();
+
+    // Remove active class from all links
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+    });
+
+    // Add active class to the clicked link
+    link.classList.add('active');
+  });
+});
+// Navbar Active Link Ends //
+
 
 
 
