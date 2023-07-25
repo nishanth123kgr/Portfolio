@@ -19,7 +19,11 @@
     <script src="./assets/js/mode.js"></script>
   </head>
   <body>
-    <nav class="navbar ctx justify-content-between navbar-fixed-top" id="navv">
+    <div id="particles-js"></div>
+    <nav
+      class="navbar ctx justify-content-between sticky-top navbar-dark navbar-expand-lg"
+      id="navv"
+    >
       <button
         title="Toggles light &amp; dark"
         aria-label="dark"
@@ -58,7 +62,21 @@
           </g>
         </svg>
       </button>
-      <div class="items center_row">
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarLinks"
+        aria-controls="navbarLinks"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div
+        class="items center_row collapse navbar-collapse justify-content-end"
+        id="navbarLinks"
+      >
         <div class="links center_row">
           <div><a class="navbar-brand active" href="#">Home</a></div>
           <div><a class="navbar-brand" href="#">Skills</a></div>
@@ -71,10 +89,14 @@
             ></a>
           </div>
           <div class="social-box">
-            <a href="https://github.com/nishanth123kgr"><i class="fab fa-github"></i></a>
+            <a href="https://github.com/nishanth123kgr"
+              ><i class="fab fa-github"></i
+            ></a>
           </div>
           <div class="social-box">
-            <a href="https://twitter.com/nishanth123kgr"><i class="fab fa-twitter"></i></a>
+            <a href="https://twitter.com/nishanth123kgr"
+              ><i class="fab fa-twitter"></i
+            ></a>
           </div>
         </div>
         <button
@@ -86,15 +108,15 @@
         </button>
       </div>
     </nav>
-    <div id="particles-js"></div>
+    
     <div class="main">
       <div class="main-left">
         <div class="welcome">
           <div>Welcome To My Portfolio</div>
         </div>
         <h1>
-          Hi! I'm Nishanth,<br />A
-          <span id="typed" class="typed" style="white-space: pre"></span>
+          Hi ! I'm Nishanth,<br />A
+          <span id="typed" class="typed" style="white-space: pre">Python<br>Aficionado.</span>
         </h1>
         <p>
           As a skilled Full Stack Developer and Python aficionado, my passion
@@ -122,12 +144,11 @@
         />
       </div>
     </div>
-    <div class="next"></div>
-
+    
     <!-- ALL SCRIPT GOES HERE -->
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
-      integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
       crossorigin="anonymous"
     ></script>
     <script src="./assets/lib/particles.js"></script>

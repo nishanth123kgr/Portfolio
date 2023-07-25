@@ -125,12 +125,12 @@ function particles_init(
   );
 }
 
-var body = document.body,
-    html = document.documentElement;
+// var body = document.body,
+//     html = document.documentElement;
 
-var height = Math.max( body.scrollHeight, body.offsetHeight, 
-                       html.clientHeight, html.scrollHeight, html.offsetHeight );
-document.getElementById("particles-js").style.height = height + "px";
+// var height = Math.max( body.scrollHeight, body.offsetHeight, 
+//                        html.clientHeight, html.scrollHeight, html.offsetHeight );
+// document.getElementById("particles-js").style.height = height + "px";
 
 particles_init();
 
@@ -140,19 +140,19 @@ particles_init();
 
 const themeToggle = document.querySelector("#theme-toggle"); // Theme Toggle Button
 
-if (theme.value === "light") { 
+if (theme.value === "light") {
   // If theme is light, then change the theme toggle button to dark
   changeTheme("light", "dark", "1.2");
-} else { 
+} else {
   // If theme is dark, then change the theme toggle button to light
   changeTheme("dark", "light", "1");
 }
 
 function changeTheme(from, to, brightness) {
   document
-      .getElementById("connect")
-      .classList.replace("btn-outline-"+from, "btn-outline-"+to);
-    document.getElementById('profile').style.filter = 'brightness('+brightness+')';
+    .getElementById("connect")
+    .classList.replace("btn-outline-" + from, "btn-outline-" + to);
+  document.getElementById('profile').style.filter = 'brightness(' + brightness + ')';
 }
 
 
@@ -173,16 +173,38 @@ themeToggle.addEventListener("click", toggleTheme);
 
 // Typewriter Effect //
 
-const typed = new Typed("#typed", {
-  strings: [
-    "Full Stack Developer.",
-    "Python Aficionado.",
-    "Data Science Student.",
-  ],
-  typeSpeed: 120,
-  backSpeed: 60,
-  loop: true,
-});
+function wordWrap(text, lineLength) {
+  const words = text.split(' ');
+  let lines = [];
+  let currentLine = '';
+
+  words.forEach((word) => {
+    if (currentLine.length + word.length + 1 <= lineLength) {
+      // If adding the word and a space doesn't exceed the line length, add it to the current line
+      currentLine += word + ' ';
+    } else {
+      // Otherwise, start a new line
+      lines.push(currentLine);
+      currentLine = word + ' ';
+    }
+  });
+
+  // Add the last line to the lines array
+  lines.push(currentLine);
+
+  return lines.join('\n');
+}
+
+// const typed = new Typed("#typed", {
+//   strings: [
+//     "Full Stack Developer.",
+//     "Python Aficionado.",
+//     "Data Science Student.",
+//   ],
+//   typeSpeed: 120,
+//   backSpeed: 60,
+//   loop: true,
+// });
 
 // Typewriter Effect Ends //
 
