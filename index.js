@@ -169,42 +169,16 @@ function toggleTheme() {
 
 themeToggle.addEventListener("click", toggleTheme);
 
-// Theme Toggle Functionality Ends //
-
-// Typewriter Effect //
-
-function wordWrap(text, lineLength) {
-  const words = text.split(' ');
-  let lines = [];
-  let currentLine = '';
-
-  words.forEach((word) => {
-    if (currentLine.length + word.length + 1 <= lineLength) {
-      // If adding the word and a space doesn't exceed the line length, add it to the current line
-      currentLine += word + ' ';
-    } else {
-      // Otherwise, start a new line
-      lines.push(currentLine);
-      currentLine = word + ' ';
-    }
-  });
-
-  // Add the last line to the lines array
-  lines.push(currentLine);
-
-  return lines.join('\n');
-}
-
-// const typed = new Typed("#typed", {
-//   strings: [
-//     "Full Stack Developer.",
-//     "Python Aficionado.",
-//     "Data Science Student.",
-//   ],
-//   typeSpeed: 120,
-//   backSpeed: 60,
-//   loop: true,
-// });
+const typed = new Typed("#typed", {
+  strings: [
+    "Full Stack Developer.",
+    "Python Aficionado.",
+    "Data Science Student.",
+  ],
+  typeSpeed: 120,
+  backSpeed: 60,
+  loop: true,
+});
 
 // Typewriter Effect Ends //
 
@@ -254,7 +228,9 @@ navLinks.forEach(link => {
   });
 });
 // Navbar Active Link Ends //
-
+themeToggle.getAttribute('aria-label') == 'dark' && changeTheme('dark', 'light', 1) 
+// console.log(getComputedStyle(document.querySelector('nav')).height);
+// document.querySelector('.main').style.height = 'calc(100vh - ' + getComputedStyle(document.querySelector('nav')).height+')'
 
 
 

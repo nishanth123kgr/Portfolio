@@ -21,7 +21,7 @@
   <body>
     <div id="particles-js"></div>
     <nav
-      class="navbar ctx justify-content-between sticky-top navbar-dark navbar-expand-lg"
+      class="navbar ctx justify-content-between fixed-top navbar-dark navbar-expand-lg"
       id="navv"
     >
       <button
@@ -104,47 +104,65 @@
           type="submit"
           id="connect"
         >
-          Let's Connect
+          Let's Connect 
         </button>
       </div>
     </nav>
-    
     <div class="main">
-      <div class="main-left">
-        <div class="welcome">
-          <div>Welcome To My Portfolio</div>
+      <div class="profile">
+        <div class="main-left">
+          <div class="welcome">
+            <div>Welcome To My Portfolio</div>
+          </div>
+          <h1>
+            Hi ! I'm Nishanth,<br />A
+            <span id="typed" class="typed" style="white-space: pre"></span>
+          </h1>
+          <p>
+            As a skilled Full Stack Developer and Python aficionado, my passion
+            lies in creating captivating creations that thrive on the internet.
+            Whether it's crafting polished websites or developing dynamic
+            applications, I immerse myself in the pursuit of pixel-perfection
+            and optimal performance. I am driven by the joy of bringing ideas to
+            life, and my ultimate goal is to deliver immersive experiences that
+            leave a lasting impact.
+          </p>
+          <div class="cnct-btn">
+            <button
+              class="btn btn-lg my-2 my-sm-0 text-white"
+              type="submit"
+            >
+              Let's Connect
+              <i class="fa-solid fa-circle-arrow-right fa-lg"></i>
+            </button>
+          </div>
         </div>
-        <h1>
-          Hi ! I'm Nishanth,<br />A
-          <span id="typed" class="typed" style="white-space: pre">Python<br>Aficionado.</span>
-        </h1>
-        <p>
-          As a skilled Full Stack Developer and Python aficionado, my passion
-          lies in creating captivating creations that thrive on the internet.
-          Whether it's crafting polished websites or developing dynamic
-          applications, I immerse myself in the pursuit of pixel-perfection and
-          optimal performance. I am driven by the joy of bringing ideas to life,
-          and my ultimate goal is to deliver immersive experiences that leave a
-          lasting impact.
-        </p>
-        <div class="cnct-btn">
-          <button
-            class="btn btn-lg btn-outline-light my-2 my-sm-0"
-            type="submit"
-          >
-            Let's Connect <i class="fas fa-arrow-right fa-border"></i>
-          </button>
+        <div class="main-right">
+          <img
+            src="./assets/images/profile.jpg"
+            alt="Nishanth Profile Image"
+            id="profile"
+          />
         </div>
-      </div>
-      <div class="main-right">
-        <img
-          src="./assets/images/profile.jpg"
-          alt="Nishanth Profile Image"
-          id="profile"
-        />
       </div>
     </div>
-    
+    <div class="skills next text-white">
+      <span class="text-white">hello</span>
+      <div class="parent">
+        <div class="child">Child 1</div>
+        <div class="child">Child 2</div>
+        <div class="child">Child 3</div>
+      </div>
+    </div>
+    <div class="skills next text-white">
+      <span class="text-white">hello</span>
+      <div class="parent">
+        <div class="child">Child 1</div>
+        <div class="child">Child 2</div>
+        <div class="child">Child 3</div>
+      </div>
+    </div>
+
     <!-- ALL SCRIPT GOES HERE -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
