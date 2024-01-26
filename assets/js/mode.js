@@ -1,7 +1,8 @@
 const storageKey = "theme-preference";
 
-const onClick = () => {
-  theme.value = theme.value === "light" ? "dark" : "light";
+const onClick = (preference) => {
+    theme.value = preference;
+  // theme.value = theme.value === "light" ? "dark" : "light";
   setPreference();
 };
 
@@ -27,7 +28,7 @@ reflectPreference();
 
 window.onload = () => {
   reflectPreference();
-  document.querySelector("#theme-toggle").addEventListener("click", onClick);
+  document.querySelector("#theme-toggle").addEventListener("click", ()=>{onClick(theme.value === "light" ? "dark" : "light")});
 };
 
 // Remove the event listener for system theme change

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile Dropdown</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .profile-container {
+      position: relative;
+      display: inline-block;
+      margin: 20px;
+    }
+
+    .profile-button {
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      display: none;
+      background-color: #f9f9f9;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+
+    .dropdown-item {
+      padding: 10px;
+      color: #333;
+      text-decoration: none;
+      display: block;
+    }
+
+    .dropdown-item:hover {
+      background-color: #3498db;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<div class="profile-container">
+  <div class="profile-button" id="profileButton">Profile</div>
+  <div class="dropdown" id="dropdown">
+    <a href="#" class="dropdown-item">Settings</a>
+    <a href="#" class="dropdown-item">Logout</a>
+  </div>
+</div>
+
+<script>
+  // JavaScript to handle hover effect
+  document.getElementById("profileButton").addEventListener("mouseover", function () {
+    document.getElementById("dropdown").style.display = "block";
+  });
+
+  document.getElementById("profileButton").addEventListener("mouseout", function () {
+    document.getElementById("dropdown").style.display = "none";
+  });
+</script>
+
+</body>
+</html>
