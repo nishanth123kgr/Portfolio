@@ -19,147 +19,141 @@
     <script src="./assets/js/mode.js"></script>
   </head>
   <body>
-    <div id="particles-js"></div>
-    <nav
-      class="navbar ctx justify-content-between fixed-top navbar-dark navbar-expand-lg"
-      id="navv"
-    >
-      <button
-        title="Toggles light &amp; dark"
-        aria-label="dark"
-        aria-live="polite"
-        class="theme-toggle"
-        id="theme-toggle"
+    <div id="screen">
+      <div id="particles-js"></div>
+      <nav
+        class="navbar ctx justify-content-between fixed-top navbar-dark navbar-expand-lg"
+        id="navv"
       >
-        <svg
-          viewBox="0 0 24 24"
-          aria-hidden="true"
-          class="sun-and-moon"
-          height="24"
-          width="24"
-        >
-          <mask class="moon" id="moon-mask">
-            <rect fill="white" height="100%" width="100%" x="0" y="0"></rect>
-            <circle cx="24" cy="10" fill="black" r="6"></circle>
-          </mask>
-          <circle
-            class="sun"
-            cx="12"
-            cy="12"
-            fill="currentColor"
-            mask="url(#moon-mask)"
-            r="6"
-          ></circle>
-          <g class="sun-beams" stroke="currentColor">
-            <line x1="12" x2="12" y1="1" y2="3"></line>
-            <line x1="12" x2="12" y1="21" y2="23"></line>
-            <line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line>
-            <line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line>
-            <line x1="1" x2="3" y1="12" y2="12"></line>
-            <line x1="21" x2="23" y1="12" y2="12"></line>
-            <line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
-            <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line>
-          </g>
-        </svg>
-      </button>
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarLinks"
-        aria-controls="navbarLinks"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div
-        class="items center_row collapse navbar-collapse justify-content-end"
-        id="navbarLinks"
-      >
-        <div class="links center_row">
-          <div><a class="navbar-brand active" href="#">Home</a></div>
-          <div><a class="navbar-brand" href="#">Skills</a></div>
-          <div><a class="navbar-brand" href="#">Projects</a></div>
-        </div>
-        <div class="social-media center_row">
-          <div class="social-box">
-            <a href="https://www.linkedin.com/in/nishanth-r1402/"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-          </div>
-          <div class="social-box">
-            <a href="https://github.com/nishanth123kgr"
-              ><i class="fab fa-github"></i
-            ></a>
-          </div>
-          <div class="social-box">
-            <a href="https://twitter.com/nishanth123kgr"
-              ><i class="fab fa-twitter"></i
-            ></a>
-          </div>
-        </div>
         <button
-          class="btn btn-lg btn-outline-light my-2 my-sm-0"
-          type="submit"
-          id="connect"
+          title="Toggles light &amp; dark"
+          aria-label="dark"
+          aria-live="polite"
+          class="theme-toggle"
+          id="theme-toggle"
         >
-          Let's Connect 
+          <svg
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            class="sun-and-moon"
+            height="24"
+            width="24"
+          >
+            <mask class="moon" id="moon-mask">
+              <rect fill="white" height="100%" width="100%" x="0" y="0"></rect>
+              <circle cx="24" cy="10" fill="black" r="6"></circle>
+            </mask>
+            <circle
+              class="sun"
+              cx="12"
+              cy="12"
+              fill="currentColor"
+              mask="url(#moon-mask)"
+              r="6"
+            ></circle>
+            <g class="sun-beams" stroke="currentColor">
+              <line x1="12" x2="12" y1="1" y2="3"></line>
+              <line x1="12" x2="12" y1="21" y2="23"></line>
+              <line x1="4.22" x2="5.64" y1="4.22" y2="5.64"></line>
+              <line x1="18.36" x2="19.78" y1="18.36" y2="19.78"></line>
+              <line x1="1" x2="3" y1="12" y2="12"></line>
+              <line x1="21" x2="23" y1="12" y2="12"></line>
+              <line x1="4.22" x2="5.64" y1="19.78" y2="18.36"></line>
+              <line x1="18.36" x2="19.78" y1="5.64" y2="4.22"></line>
+            </g>
+          </svg>
         </button>
-      </div>
-    </nav>
-    <div class="main">
-      <div class="profile">
-        <div class="main-left">
-          <div class="welcome">
-            <div>Welcome To My Portfolio</div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarLinks"
+          aria-controls="navbarLinks"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div
+          class="items center_row collapse navbar-collapse justify-content-end"
+          id="navbarLinks"
+        >
+          <div class="links center_row">
+            <div><a class="navbar-brand active" href="#">Home</a></div>
+            <div><a class="navbar-brand" href="#">Skills</a></div>
+            <div><a class="navbar-brand" href="#">Projects</a></div>
           </div>
-          <h1>
-            Hi ! I'm Nishanth,<br />A
-            <span id="typed" class="typed" style="white-space: pre"></span>
-          </h1>
-          <p>
-            As a skilled Full Stack Developer and Python aficionado, my passion
-            lies in creating captivating creations that thrive on the internet.
-            Whether it's crafting polished websites or developing dynamic
-            applications, I immerse myself in the pursuit of pixel-perfection
-            and optimal performance. I am driven by the joy of bringing ideas to
-            life, and my ultimate goal is to deliver immersive experiences that
-            leave a lasting impact.
-          </p>
-          <div class="cnct-btn">
-            <button
-              class="btn btn-lg my-2 my-sm-0 text-white"
-              type="submit"
-            >
-              Let's Connect
-              <i class="fa-solid fa-circle-arrow-right fa-lg"></i>
-            </button>
+          <div class="social-media center_row">
+            <div class="social-box">
+              <a href="https://www.linkedin.com/in/nishanth-r1402/"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+            </div>
+            <div class="social-box">
+              <a href="https://github.com/nishanth123kgr"
+                ><i class="fab fa-github"></i
+              ></a>
+            </div>
+            <div class="social-box">
+              <a href="https://twitter.com/nishanth123kgr"
+                ><i class="fab fa-twitter"></i
+              ></a>
+            </div>
+          </div>
+          <button
+            class="btn btn-lg btn-outline-light my-2 my-sm-0"
+            type="submit"
+            id="connect"
+          >
+            Let's Connect
+          </button>
+        </div>
+      </nav>
+      <div class="main">
+        <div class="profile">
+          <div class="main-left">
+            <div class="welcome">
+              <div>Welcome To My Portfolio</div>
+            </div>
+            <h1>
+              Hi ! I'm Nishanth,<br />A
+              <span id="typed" class="typed" style="white-space: pre"></span>
+            </h1>
+            <p>
+              As a skilled Full Stack Developer and Python aficionado, my
+              passion lies in creating captivating creations that thrive on the
+              internet. Whether it's crafting polished websites or developing
+              dynamic applications, I immerse myself in the pursuit of
+              pixel-perfection and optimal performance. I am driven by the joy
+              of bringing ideas to life, and my ultimate goal is to deliver
+              immersive experiences that leave a lasting impact.
+            </p>
+            <div class="cnct-btn">
+              <button class="btn btn-lg my-2 my-sm-0 text-white" type="submit">
+                Let's Connect
+                <i class="fa-solid fa-circle-arrow-right fa-lg"></i>
+              </button>
+            </div>
+          </div>
+          <div class="main-right">
+            <img
+              src="./assets/images/profile.jpg"
+              alt="Nishanth Profile Image"
+              id="profile"
+            />
           </div>
         </div>
-        <div class="main-right">
-          <img
-            src="./assets/images/profile.jpg"
-            alt="Nishanth Profile Image"
-            id="profile"
-          />
+      </div>
+      <div class="skills next text-white position-absolute top-0 invisible">
+        <span class="text-white">hello</span>
+        <div class="parent">
+          <div class="child">Child 1</div>
+          <div class="child">Child 2</div>
+          <div class="child">Child 3</div>
         </div>
       </div>
-    </div>
-    <div class="skills next text-white">
-      <span class="text-white">hello</span>
-      <div class="parent">
-        <div class="child">Child 1</div>
-        <div class="child">Child 2</div>
-        <div class="child">Child 3</div>
-      </div>
-    </div>
-    <div class="skills next text-white">
-      <span class="text-white">hello</span>
-      <div class="parent">
-        <div class="child">Child 1</div>
-        <div class="child">Child 2</div>
-        <div class="child">Child 3</div>
+      <div class="cutter" id="cutter">
+        <div class="inner-cutter"></div>
       </div>
     </div>
 

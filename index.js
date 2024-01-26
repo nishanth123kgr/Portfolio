@@ -228,10 +228,64 @@ navLinks.forEach(link => {
   });
 });
 // Navbar Active Link Ends //
-themeToggle.getAttribute('aria-label') == 'dark' && changeTheme('dark', 'light', 1) 
+themeToggle.getAttribute('aria-label') == 'dark' && changeTheme('dark', 'light', 1)
 // console.log(getComputedStyle(document.querySelector('nav')).height);
 // document.querySelector('.main').style.height = 'calc(100vh - ' + getComputedStyle(document.querySelector('nav')).height+')'
 
+// Scroll event on window
+// window.addEventListener('wheel', () => {
+//   // Get the scroll position of the window
+//   let scrollPosition = window.scrollY;
+//   // Get scroll percentage
+//   let scrollPercentage = (scrollPosition / window.innerHeight) * 100;
+//   // Get the progress bar element
+  
+//   // Set the width of the progress bar based on the scroll percentage
+//   progressBar.style.width = scrollPercentage + '%';
+//   console.log(scrollPercentage);
+// });
+
+let progressBar = document.getElementById('cutter');
+
+var MOUSE_OVER = false;
+var body = document.querySelector('body');
+var myDiv = document.getElementById('screen');
+
+body.addEventListener('mousewheel', function (e) {
+  if (MOUSE_OVER) {
+    e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+    return false;
+  }
+}, { passive: false });
+
+myDiv.addEventListener('mouseenter', function () {
+  MOUSE_OVER = true;
+});
+
+myDiv.addEventListener('mouseleave', function () {
+  MOUSE_OVER = false;
+});
+
+myDiv.addEventListener('mousewheel', function (e) {
+  var delta = e.wheelDelta;
+  if (delta > 0) {
+    // Scroll up
+    console.log('Scroll up');
+    let width = parseInt(getComputedStyle(progressBar).width.replace('px', '')) + 10;
+
+    progressBar.style.width =  width > 100 ? '300%' : width + 'px';
+    console.log(parseFloat(getComputedStyle(progressBar).borderWidth)+1);
+    let borderWidth = parseFloat(getComputedStyle(progressBar).borderWidth.replace('px', '')) + 1;
+    progressBar.style.borderWidth = borderWidth>2?borderWidth + 'px': '2px';
+  } else {
+    // Scroll down
+    console.log('Scroll down');
+    let width = parseInt(getComputedStyle(progressBar).width.replace('px', '')) - 10;
+    progressBar.style.width = width < 0 ? '20px' : width + 'px';
+    let borderWidth = parseFloat(getComputedStyle(progressBar).borderWidth.replace('px', '')) - 1;
+    progressBar.style.borderWidth = borderWidth>2?borderWidth + 'px': '2px';
 
 
+  }
+});
 

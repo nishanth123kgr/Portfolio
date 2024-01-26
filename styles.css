@@ -17,7 +17,7 @@
 }
 
 body {
-  overflow-x: hidden;
+  overflow: hidden;
   color: var(--primary_text);
   background: var(--primary_bg);
   height: 100%;
@@ -41,7 +41,6 @@ body {
   border-color: none;
 }
 
-
 .main-left button {
   border: none;
   /* color: #ff00cf; */
@@ -52,21 +51,11 @@ body {
   width: fit-content;
 }
 
-.grad{
+.grad {
   width: 100%;
   height: 100px;
   /* background: linear-gradient(rgba(0,0,0,0) 3%, var(--primary_bg) 50%); */
-  background: linear-gradient(rgba(0,0,0,0) 40%, var(--primary_bg) 100%);
-
-}
-
-
-
-.fa-border {
-  border-radius: 50%;
-  border-color: #8400ff;
-  padding-bottom: .2em;
-  border-width: .2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0) 40%, var(--primary_bg) 100%);
 }
 
 .main-left button {
@@ -84,9 +73,8 @@ body {
   -webkit-text-fill-color: transparent;
 } */
 
-
 .navbar {
-  padding: 1% 8%;
+  padding: 1.5% 8%;
   width: 100%;
   z-index: 1;
 }
@@ -104,11 +92,10 @@ body {
   z-index: -1;
 }
 
-
 .links .active,
 .main-left .typed,
 .links div:hover a,
-.btn-outline-light, .main-left button:hover > i{
+.btn-outline-light {
   color: #ff00cf;
   background: linear-gradient(248deg, #8400ff 3%, #ff00cf 74%);
   background-clip: text;
@@ -116,8 +103,12 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.main-left button:hover > i {
+  color: #ff00cf;
+}
 .next {
   height: 100vh;
+  /* top: 0; */
 }
 
 .main {
@@ -129,13 +120,13 @@ body {
   height: 100vh;
 }
 
-.profile{
+.profile {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 4% 8% 0;
+  padding: 3% 8% 0;
 }
 
 .main-left {
@@ -165,9 +156,11 @@ body {
   font-weight: 700;
   padding: 7px;
   background: rgb(255, 0, 207);
-  background: linear-gradient(248deg,
-      rgba(255, 0, 207, 1) 3%,
-      rgba(132, 0, 255, 1) 74%);
+  background: linear-gradient(
+    248deg,
+    rgba(255, 0, 207, 1) 3%,
+    rgba(132, 0, 255, 1) 74%
+  );
 }
 
 .main-left p {
@@ -216,7 +209,6 @@ body {
   cursor: pointer;
 }
 
-
 .welcome div {
   border: 3px solid #fff;
   padding: 10px;
@@ -226,8 +218,6 @@ body {
   font-weight: 500;
   margin-right: 0;
 }
-
-
 
 .social-media {
   margin-right: 2.5rem;
@@ -288,7 +278,6 @@ body {
 }
 
 @media (max-width: 900px) {
-
   #navbarLinks,
   .main {
     flex-direction: column;
@@ -314,4 +303,23 @@ body {
 
 .main-left p {
   display: none;
+}
+
+.cutter {
+  height: 250vh;
+  width: 20px;
+  position: fixed;
+  right: 50%;
+  top: 50%;
+  transform: translate(50%, -50%) rotate(25deg);
+  border: #fff 2px dashed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inner-cutter {
+  height: 100%;
+  width: 50%;
+  background-color: #fff;
 }
