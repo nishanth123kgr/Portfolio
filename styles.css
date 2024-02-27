@@ -316,7 +316,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+<<<<<<< HEAD
   transition: all 0.3s ease;
+=======
+>>>>>>> bc6f20595701e36b805cba7745b060e8b95cc4d5
 }
 
 .inner-cutter {
@@ -324,6 +327,7 @@ body {
   width: 50%;
   background-color: #fff;
 }
+<<<<<<< HEAD
 
 .skill-header{
   -webkit-text-fill-color: transparent;
@@ -418,3 +422,5 @@ body {
 .stage .box:nth-child(13) {
   background: hsla( 30, 100%, 50%, 0.8);
 }
+=======
+>>>>>>> bc6f20595701e36b805cba7745b060e8b95cc4d5

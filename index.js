@@ -240,7 +240,11 @@ themeToggle.getAttribute('aria-label') == 'dark' && changeTheme('dark', 'light',
 //   // Get scroll percentage
 //   let scrollPercentage = (scrollPosition / window.innerHeight) * 100;
 //   // Get the progress bar element
+<<<<<<< HEAD
 
+=======
+  
+>>>>>>> bc6f20595701e36b805cba7745b060e8b95cc4d5
 //   // Set the width of the progress bar based on the scroll percentage
 //   progressBar.style.width = scrollPercentage + '%';
 //   console.log(scrollPercentage);
@@ -274,6 +278,7 @@ myDiv.addEventListener('mousewheel', function (e) {
     console.log('Scroll up');
     let width = parseInt(getComputedStyle(progressBar).width.replace('px', '')) + 10;
 
+<<<<<<< HEAD
     if (width > 100) {
       progressBar.style.width = '300%';
       console.log('Theme Toggle');
@@ -285,13 +290,23 @@ myDiv.addEventListener('mousewheel', function (e) {
     console.log(parseFloat(getComputedStyle(progressBar).borderWidth) + 1);
     let borderWidth = parseFloat(getComputedStyle(progressBar).borderWidth.replace('px', '')) + 1;
     progressBar.style.borderWidth = borderWidth > 2 ? borderWidth + 'px' : '2px';
+=======
+    progressBar.style.width =  width > 100 ? '300%' : width + 'px';
+    console.log(parseFloat(getComputedStyle(progressBar).borderWidth)+1);
+    let borderWidth = parseFloat(getComputedStyle(progressBar).borderWidth.replace('px', '')) + 1;
+    progressBar.style.borderWidth = borderWidth>2?borderWidth + 'px': '2px';
+>>>>>>> bc6f20595701e36b805cba7745b060e8b95cc4d5
   } else {
     // Scroll down
     console.log('Scroll down');
     let width = parseInt(getComputedStyle(progressBar).width.replace('px', '')) - 10;
     progressBar.style.width = width < 0 ? '20px' : width + 'px';
     let borderWidth = parseFloat(getComputedStyle(progressBar).borderWidth.replace('px', '')) - 1;
+<<<<<<< HEAD
     progressBar.style.borderWidth = borderWidth > 2 ? borderWidth + 'px' : '2px';
+=======
+    progressBar.style.borderWidth = borderWidth>2?borderWidth + 'px': '2px';
+>>>>>>> bc6f20595701e36b805cba7745b060e8b95cc4d5
 
 
   }
